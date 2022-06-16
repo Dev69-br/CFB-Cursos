@@ -21,5 +21,25 @@
     </div><br>
     <button id="bt1">iniciar</button>
     <button id="bt2">parar</button>
+    <script>
+        var tmp;
+        function mudaCor(){
+            var obj = document.getElementById('dv1')
+            var r = Math.floor(Math.random()*255)
+            var g = Math.floor(Math.random()*255)
+            var b = Math.floor(Math.random()*255)
+            obj.style.backgroundColor = 'rgb('+r+','+g+','+b+')'
+        }
+        //var tmp = setTimeout(mudaCor,3000);
+        function iniciar(){
+          tmp = setInterval(mudaCor,1000);  
+        }
+        function para(){
+            clearInterval(tmp);
+        }
+        document.getElementById('bt1').addEventListener('click',iniciar)
+        document.getElementById('bt2').addEventListener('click',para)
+
+    </script>
 </body>
 </html>
