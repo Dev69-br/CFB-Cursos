@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings P1</title>
+</head>
+<body>
+    <p id="txt">CbF Cursos- Curso de Javascript-aula 46 do Curso de javascript</p>
+
+    <script>
+        /* Modificador i - Busca sem case-sensitive,ou seja ,Nao diferencia letras de maiusculas e menusculas
+        madificador G - diz para o metodo não para na primeira mocorremcia encontrada,cada ocorrencia é armazenada em um array
+        Modificador M - Pesquisa normal sem armazenar em forma de array*/
+        var texto =document.getElementById('txt').innerHTML;
+        var res = texto.match(/\d/ig);
+        document.write(res + ':' + res.length + '<br>');
+        document.write(res[1]);
+    </script>
+</body>
+</html>
